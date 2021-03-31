@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		AB85E8F9261395C900B66B0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E8F8261395C900B66B0E /* AppDelegate.swift */; };
 		AB85E8FB261395C900B66B0E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E8FA261395C900B66B0E /* SceneDelegate.swift */; };
-		AB85E8FD261395C900B66B0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E8FC261395C900B66B0E /* ViewController.swift */; };
+		AB85E8FD261395C900B66B0E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E8FC261395C900B66B0E /* LoginViewController.swift */; };
 		AB85E900261395C900B66B0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB85E8FE261395C900B66B0E /* Main.storyboard */; };
 		AB85E902261395CB00B66B0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB85E901261395CB00B66B0E /* Assets.xcassets */; };
 		AB85E905261395CB00B66B0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB85E903261395CB00B66B0E /* LaunchScreen.storyboard */; };
+		AB85E90F2613A00C00B66B0E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB85E90E2613A00C00B66B0E /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AB85E8F5261395C900B66B0E /* LogInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB85E8F8261395C900B66B0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB85E8FA261395C900B66B0E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AB85E8FC261395C900B66B0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AB85E8FC261395C900B66B0E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AB85E8FF261395C900B66B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AB85E901261395CB00B66B0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AB85E904261395CB00B66B0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB85E906261395CB00B66B0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AB85E90E2613A00C00B66B0E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				AB85E8F8261395C900B66B0E /* AppDelegate.swift */,
 				AB85E8FA261395C900B66B0E /* SceneDelegate.swift */,
-				AB85E8FC261395C900B66B0E /* ViewController.swift */,
+				AB85E8FC261395C900B66B0E /* LoginViewController.swift */,
 				AB85E8FE261395C900B66B0E /* Main.storyboard */,
+				AB85E90E2613A00C00B66B0E /* WelcomeViewController.swift */,
 				AB85E901261395CB00B66B0E /* Assets.xcassets */,
 				AB85E903261395CB00B66B0E /* LaunchScreen.storyboard */,
 				AB85E906261395CB00B66B0E /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB85E8FD261395C900B66B0E /* ViewController.swift in Sources */,
+				AB85E8FD261395C900B66B0E /* LoginViewController.swift in Sources */,
+				AB85E90F2613A00C00B66B0E /* WelcomeViewController.swift in Sources */,
 				AB85E8F9261395C900B66B0E /* AppDelegate.swift in Sources */,
 				AB85E8FB261395C900B66B0E /* SceneDelegate.swift in Sources */,
 			);
@@ -295,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.tio.LogInApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.tio.LogInApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
