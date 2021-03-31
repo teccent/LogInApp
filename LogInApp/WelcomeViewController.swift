@@ -22,6 +22,7 @@ class WelcomeViewController: UIViewController {
         logOutButton.layer.cornerRadius = 10
     }
 
+    
     @IBAction func logOutAction() {
         dismiss(animated: true)
     }

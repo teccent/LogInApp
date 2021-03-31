@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        guard let welcomeVC = segue.destination as? WelcomeViewController
+        else { return }
         welcomeVC.welcomText = userNameTF.text
     }
     
@@ -34,16 +35,19 @@ class LoginViewController: UIViewController {
         super .touchesBegan(touches, with: event)
     }
     
+    
     @IBAction func logInAction(_ sender: UIButton) {
             if userNameTF.text != correctUserName {
                 showAlert(with: "Oops!",
                           and: "The username is incorrect")
                 userNameTF.text = ""
                 passwordTF.text = ""
+                return
             } else if passwordTF.text != correctPassword {
                 showAlert(with: "Oops!",
                           and: "The password is incorrect")
                 passwordTF.text = ""
+                return
             }
     }
     
@@ -56,6 +60,7 @@ class LoginViewController: UIViewController {
     @IBAction func forgotPasswordAction() {
         showAlert(with: "Remind!", and: "Password - 12345")
     }
+    
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
