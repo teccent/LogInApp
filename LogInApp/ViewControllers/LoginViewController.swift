@@ -13,9 +13,8 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     @IBOutlet var logInButton: UIButton!
-
-    let correctUserName = "User"
-    let correctPassword = "12345"
+    
+    let user = Person(userInfo: User())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,42 +22,46 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController
-        else { return }
-        welcomeVC.welcomText = userNameTF.text
+        let tabBarController = segue.destination as! UITabBarController
+        
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.welcomeText = user.personName
+            } else if let infoVC = viewController as? InfoViewController {
+                infoVC.nameT = user.personName
+                infoVC.ageT = user.personAge
+                infoVC.countriT = user.personCountri
+            } else if let factsVC = viewController as? FactsViewController {
+                factsVC.animalT = user.favouriteAnimal
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let _ = touches.first{
-            view.endEditing(true)
-        }
         super .touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     
-    @IBAction func logInAction(_ sender: UIButton) {
-            if userNameTF.text != correctUserName {
+    @IBAction func logInAction() {
+        if userNameTF.text != user.userInfo.userName ||
+            passwordTF.text != user.userInfo.password {
                 showAlert(with: "Oops!",
-                          and: "The username is incorrect")
-                userNameTF.text = ""
+                          and: "The username or password is incorrect")
                 passwordTF.text = ""
-                return
-            } else if passwordTF.text != correctPassword {
-                showAlert(with: "Oops!",
-                          and: "The password is incorrect")
-                passwordTF.text = ""
-                return
             }
     }
     
     
     @IBAction func forgotUserNameAction() {
-        showAlert(with: "Remind!", and: "User name - User")
+        showAlert(with: "Remind!", and: "User name - \(user.userInfo.userName)")
     }
     
     
     @IBAction func forgotPasswordAction() {
-        showAlert(with: "Remind!", and: "Password - 12345")
+        showAlert(with: "Remind!", and: "Password - \(user.userInfo.password)")
     }
     
     
@@ -75,7 +78,8 @@ extension LoginViewController {
         let alert = UIAlertController(
             title: title,
             message: message,
-            preferredStyle: .alert)
+            preferredStyle: .alert
+        )
         let gotItAction = UIAlertAction(title: "Got it!", style: .default)
         alert.addAction(gotItAction)
         present(alert, animated: true)

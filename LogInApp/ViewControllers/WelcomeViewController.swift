@@ -12,19 +12,14 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var welcomLabel: UILabel!
     @IBOutlet var logOutButton: UIButton!
     
-    var welcomText: String!
+    var welcomeText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomLabel.text = "Hello, " + welcomText + "!"
+        welcomLabel.text = "Hello, " + welcomeText + "!"
         
         logOutButton.layer.cornerRadius = 10
-    }
-
-    
-    @IBAction func logOutAction() {
-        dismiss(animated: true)
     }
     
 }
