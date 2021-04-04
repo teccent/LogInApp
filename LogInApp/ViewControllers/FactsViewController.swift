@@ -16,7 +16,7 @@ class FactsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        animalLabel.text = "Fauvotite animal is " + animalT
+        animalLabel.text = "Favotite animal is " + animalT
     }
     
 

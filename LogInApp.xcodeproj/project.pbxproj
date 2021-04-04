@@ -48,6 +48,8 @@
 		AB68EAE02619E8860021D286 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				AB68EAF72619FFBA0021D286 /* FactsViewController.swift */,
+				AB68EAF42619FF860021D286 /* InfoViewController.swift */,
 				AB85E8FC261395C900B66B0E /* LoginViewController.swift */,
 				AB85E90E2613A00C00B66B0E /* WelcomeViewController.swift */,
 			);
@@ -108,8 +110,6 @@
 		AB85E8F7261395C900B66B0E /* LogInApp */ = {
 			isa = PBXGroup;
 			children = (
-				AB68EAF42619FF860021D286 /* InfoViewController.swift */,
-				AB68EAF72619FFBA0021D286 /* FactsViewController.swift */,
 				AB68EAE02619E8860021D286 /* ViewControllers */,
 				AB68EAE22619E8B90021D286 /* Models */,
 				AB68EAE32619E8DA0021D286 /* Storyboards */,
